@@ -20,6 +20,8 @@ public extension WhatsNew {
         
         /// The optional HapticFeedback
         public let hapticFeedback: HapticFeedback?
+
+        public let font: Font
         
         /// The optional on dismiss closure
         public let onDismiss: (() -> Void)?
@@ -38,12 +40,14 @@ public extension WhatsNew {
             backgroundColor: Color = .accentColor,
             foregroundColor: Color = .white,
             hapticFeedback: HapticFeedback? = nil,
+            font: Font = .system(size: 16.0),
             onDismiss: (() -> Void)? = nil
         ) {
             self.title = title
             self.backgroundColor = backgroundColor
             self.foregroundColor = foregroundColor
             self.hapticFeedback = hapticFeedback
+            self.font = font
             self.onDismiss = onDismiss
         }
         

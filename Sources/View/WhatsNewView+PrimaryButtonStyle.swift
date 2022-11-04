@@ -43,6 +43,7 @@ extension WhatsNewView.PrimaryButtonStyle: ButtonStyle {
                 .padding(.vertical, 8)
             #endif
         }
+        .font(self.primaryAction.font)
         .foregroundColor(self.primaryAction.foregroundColor)
         .background(self.primaryAction.backgroundColor)
         .cornerRadius(self.layout.footerPrimaryActionButtonCornerRadius)
