@@ -17,6 +17,12 @@ public extension WhatsNew {
         
         /// The subtitle Text
         public let subtitle: Text
+
+        public let titleFont: Font
+        public let titleForegroundColor: Color
+
+        public let subtitleFont: Font
+        public let subtitleForegroundColor: Color
         
         // MARK: Initializer
         
@@ -28,11 +34,19 @@ public extension WhatsNew {
         public init(
             image: Image,
             title: Text,
-            subtitle: Text
+            titleFont: Font = .subheadline.weight(.semibold),
+            titleForegroundColor: Color = .primary,
+            subtitle: Text,
+            subtitleFont: Font = .subheadline,
+            subtitleForegroundColor: Color = .secondary
         ) {
             self.image = image
             self.title = title
+            self.titleFont = titleFont
+            self.titleForegroundColor = titleForegroundColor
             self.subtitle = subtitle
+            self.subtitleFont = subtitleFont
+            self.subtitleForegroundColor = subtitleForegroundColor
         }
         
     }

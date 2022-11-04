@@ -127,7 +127,7 @@ private extension WhatsNewView {
         Text(
             whatsNewText: self.whatsNew.title.text
         )
-        .font(.largeTitle.bold())
+        .font(self.whatsNew.title.font)
         .multilineTextAlignment(.center)
         .fixedSize(horizontal: false, vertical: true)
     }
@@ -158,14 +158,14 @@ private extension WhatsNewView {
                 Text(
                     whatsNewText: feature.title
                 )
-                .font(.subheadline.weight(.semibold))
-                .foregroundColor(.primary)
+                .font(feature.titleFont)
+                .foregroundColor(feature.titleForegroundColor)
                 .fixedSize(horizontal: false, vertical: true)
                 Text(
                     whatsNewText: feature.subtitle
                 )
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+                .font(feature.subtitleFont)
+                .foregroundColor(feature.subtitleForegroundColor)
                 .fixedSize(horizontal: false, vertical: true)
             }
             .multilineTextAlignment(.leading)

@@ -14,6 +14,9 @@ public extension WhatsNew {
         
         /// The foreground color
         public let foregroundColor: Color
+
+        /// The custom Font
+        public let font: Font
         
         // MARK: Initializer
         
@@ -23,10 +26,12 @@ public extension WhatsNew {
         ///   - foregroundColor: The foreground color. Default value `.primary`
         public init(
             text: Text,
-            foregroundColor: Color = .primary
+            foregroundColor: Color = .primary,
+            font: Font = .largeTitle.bold()
         ) {
             self.text = text
             self.foregroundColor = foregroundColor
+            self.font = font
         }
         
     }
